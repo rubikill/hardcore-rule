@@ -2,8 +2,7 @@ defmodule Main do
   def sort(str) do
     str
     |> String.to_charlist()
-    |> Enum.sort(fn a, b -> a < b end)
-    |> to_string()
+    |> Enum.sort(&(&1 < &2))
   end
 
   def valid_anagram(s1, s2) do
